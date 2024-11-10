@@ -17,7 +17,6 @@ all:
 	cp config/rebar.config .;
 	rebar3 compile;
 	rm -rf _build;
-	rm -rf common_include;
 	rm -rf rebar.lock;
 	rm -rf rebar.config;
 	git status
