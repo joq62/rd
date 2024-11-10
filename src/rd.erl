@@ -526,9 +526,7 @@ call(WantedHost,ResourceType,M,F,A,TO)->
 			       {badrpc,Reason}->
 				   {error,["Badrpc reason ",Reason]};
 			       Res->
-				   {ok,Res};
-			       X ->
-				   {error,["Unmatched signal ",X]}
+				   {ok,Res}
 			   end
 		   end
 	   end,

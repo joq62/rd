@@ -194,7 +194,7 @@ handle_info(timeout, State) ->
 
 handle_info(rd_loop_timeout, State) ->
     CtrlNode=lib_vm:get_node(?ControlNodeName),
-    Pong=net_adm:ping(CtrlNode),
+    _Pong=net_adm:ping(CtrlNode),
     NewControlStatus=case net_adm:ping(CtrlNode) of
 			 pang->
 			     case State#state.control_node_active of
